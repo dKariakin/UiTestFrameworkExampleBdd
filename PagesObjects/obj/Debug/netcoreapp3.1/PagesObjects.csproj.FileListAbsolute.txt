@@ -1,5 +1,0 @@
-D:\projects\UiTestFrameworkExampleBdd\PagesObjects\bin\Debug\netcoreapp3.1\PagesObjects.deps.json
-D:\projects\UiTestFrameworkExampleBdd\PagesObjects\bin\Debug\netcoreapp3.1\PagesObjects.dll
-D:\projects\UiTestFrameworkExampleBdd\PagesObjects\obj\Debug\netcoreapp3.1\PagesObjects.csprojAssemblyReference.cache
-D:\projects\UiTestFrameworkExampleBdd\PagesObjects\obj\Debug\netcoreapp3.1\PagesObjects.AssemblyInfoInputs.cache
-D:\projects\UiTestFrameworkExampleBdd\PagesObjects\obj\Debug\netcoreapp3.1\PagesObjects.AssemblyInfo.cs
