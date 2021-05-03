@@ -4,3 +4,4 @@
 [Oo]bj/
 .vs/
 .vs/UiTestFrameworkExampleBdd/v16/.suo
+*.user
