@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace PagesObjects.Google
+namespace PageObjects.Google
 {
   public class GoogleSearchResultPage
   {

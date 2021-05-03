@@ -6,6 +6,7 @@ namespace PagesObjects.Google
   public class GoogleMainPage
   {
     private IWebDriver _webDriver;
+    private const string PageAddress = "www.google.com";
 
     private IWebElement GetSearchString() => _webDriver.FindElement(By.Name("q"));
 
