@@ -6,10 +6,15 @@
 
   <ItemGroup>
     <Compile Remove="Hooks\**" />
+    <Compile Remove="Installer\**" />
     <EmbeddedResource Remove="Hooks\**" />
+    <EmbeddedResource Remove="Installer\**" />
     <None Remove="Hooks\**" />
+    <None Remove="Installer\**" />
     <SpecFlowFeatureFiles Remove="Hooks\**" />
+    <SpecFlowFeatureFiles Remove="Installer\**" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Hooks\**" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Installer\**" />
   </ItemGroup>
 
   <ItemGroup>
