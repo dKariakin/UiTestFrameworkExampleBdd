@@ -1,0 +1,8 @@
+*.cache
+*.v2
+[Bb]in/
+[Oo]bj/
+.vs/
+.vs/UiTestFrameworkExampleBdd/v16/.suo
+*.user
+*.log
