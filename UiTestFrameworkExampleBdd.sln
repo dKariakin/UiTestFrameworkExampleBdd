@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Scenarios", "Scenarios\Scen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PageObjects", "PageObjects\PageObjects.csproj", "{1A2D71CB-0D0F-49D2-8C43-A9ED8F85E739}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drivers", "Drivers\Drivers.csproj", "{9ADBCF4C-28C0-4A24-882F-2BED256FC08B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Drivers", "Drivers\Drivers.csproj", "{9ADBCF4C-28C0-4A24-882F-2BED256FC08B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
