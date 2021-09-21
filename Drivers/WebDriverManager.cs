@@ -1,14 +1,14 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 namespace Drivers
 {
   public sealed class WebDriverManager
   {
-    private readonly Lazy<IWebDriver> _webDriver = new Lazy<IWebDriver>(() =>
+    private readonly IWebDriver _webDriver;
+
+    public WebDriverManager()
     {
-      IWebDriver driver;
       ChromeOptions options = new ChromeOptions
       {
         AcceptInsecureCertificates = true,
@@ -16,16 +16,14 @@ namespace Drivers
         UnhandledPromptBehavior = UnhandledPromptBehavior.Ignore
       };
 
-      driver = new ChromeDriver(options);
+      _webDriver = new ChromeDriver(options);
 
-      driver.Manage().Window.Maximize();
-      
-      return driver;
-    });
+      _webDriver.Manage().Window.Maximize();
+    }
 
     public IWebDriver GetDriver()
     {
-      return _webDriver.Value;
+      return _webDriver;
     }
   }
 }

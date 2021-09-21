@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Drivers;
 using PageObjects.Pages;
 using PageObjects.Pages.Google;
@@ -8,27 +7,25 @@ namespace PageObjects
 {
   public sealed class PageObjectFactory
   {
-    private readonly List<IPage> factory;
+    private readonly IDictionary<string, IPage> factory;
 
     public PageObjectFactory(WebDriverManager driverManager)
     {
-      factory = new List<IPage>()
+      factory = new Dictionary<string, IPage>()
       {
-        new GoogleMainPage(driverManager),
-        new GoogleSearchResultPage(driverManager)
+        { nameof(GoogleMainPage), new GoogleMainPage(driverManager) },
+        { nameof(GoogleSearchResultPage), new GoogleSearchResultPage(driverManager) }
       };
     }
 
     public T GetFromFactory<T>() where T : IPage
     {
-      T page = factory.OfType<T>().FirstOrDefault();
-
-      if (page == null)
+      if (factory.TryGetValue(typeof(T).FullName, out IPage page))
       {
-        throw new KeyNotFoundException($"Page with type {typeof(T)} hasn't been added to the page factory");
+        return (T)page;
       }
-      
-      return page;
+
+      throw new KeyNotFoundException($"Page with type {typeof(T)} hasn't been added to the page factory");
     }
   }
 }

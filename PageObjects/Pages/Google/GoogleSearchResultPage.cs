@@ -9,7 +9,7 @@ namespace PageObjects.Pages.Google
     {
     }
 
-    protected override string pageAddress => throw new System.NotImplementedException();
+    protected override string pageAddress => null;
 
     private IWebElement SearchResults => webDriver.FindElement(By.XPath("//div[@id='res']//div[@class='r']//h3"));
   }
